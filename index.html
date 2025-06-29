@@ -1,37 +1,71 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <!-- Reemplazar por los datos que correspondan -->
-        <title>Programación I | Parcial 2 | APELLIDO/S</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- Reemplazar por los datos que correspondan -->
-            <h1>Programación I | Parcial 2 | APELLIDO/S | Mi carrito</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Tienda de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-color container-fluid">
+        <header class="container">
+            <h1>Pipos</h1>
+            <div class="cart-summary">
+                <span>Items: <span id="item-count">0</span></span>
+                <span id="total-resumen">Total: $0.000</span>
+                <button class="btn bg-gradient btn-pipo" id="toggleCarritoBtn">Ver Carrito</button>
+            </div>
         </header>
-        <main>
-            <!-- Este es un ejemplo de contenedor de carrito -->
-            <div id="carrito">
-                <p><span>0</span> ítems agregados</p>
-                <p>$<span>0</span> es el total</p>
-                <!-- Estos filtros pueden ser links, botones, menu desplegable. Sugiero generarlos dinamicamente -->
-                <p>Filtrar por <a href="#">Categoría 1</a> | <a href="#">Categoría 2</a> | <a href="#">Categoría 3</a></p>
-                <button>Ver carrito</button>
+    </div>
+    <div class="container bg-light pt-lg-2">
+        <img class="rounded-2 img-fluid d-none d-lg-block" src="img/banner_edit.jpg" alt="banner oficial de la muñecos Pipos">
+    </div>
+    <main class="container-lg bg-light py-5 px-0 px-lg-3">
+    
+        <section class="container pt-3">
+            <h2 id="somos" class="border-bottom pb-2 border-2 border-info">🏠 Quiénes Somos</h2>
+            <div class="row">
+                <p class="col-12 col-md-6">Somos fanáticos de las figuras.
+                    En nuestra tienda, los protagonistas son los <strong>muñecos con cabeza grande</strong> y personalidad
+                    aún más grande. Desde héroes
+                    del cine, personajes icónicos de series, leyendas del deporte o figuras personalizadas, nos apasiona dar
+                    vida a esos
+                    personajes que te hacen sonreír, recordar y coleccionar.</p>
+                <p class="col-12 col-md-6">Nacimos del amor por la <em>cultura pop</em>, el <em>coleccionismo</em> y el
+                    diseño. Cada figura que vendemos está seleccionada con cuidado, para que encuentres esa pieza única que
+                    falta en tu estantería o el regalo perfecto para ese fan especial.</p>
             </div>
-            <h2>Productos</h2>
-            
-            <div id="productos">
-                <!-- Aca irian los productos -->
-            </div>
-
-        </main>
-
-        <footer>
+        </section>
+        <div class="filtros-ordenamiento">
+            <label for="select-categoria">Filtrar por Categoría:</label>
+            <select class="form-select w-25" id="select-categoria">
+                <option value="todas">Todas</option>
+            </select>
+        
+            <label for="select-orden-precio">Ordenar por Precio:</label>
+            <select class="form-select w-25" id="select-orden-precio">
+                <option value="">Sin ordenar</option>
+                <option value="ascendente">Ascendente</option>
+                <option value="descendente">Descendente</option>
+            </select>
+        </div>
+        <div id="productos-container" class="container">
+            <!--aca van los productos que carge el json -->
+        </div>
+    
+    </main>
+    <div id="carrito-modal" class="modal">
+        <!--aca se van a cargar los datos de la ventana modal del carrito -->
+    </div>
+    <div id="detalle-producto-modal" class="modal">
+        <!--aca se cargan los detalles de la modal que se dispara con el btn ver más -->
+    </div>
+    <footer class="container-fluid bg-color">
+        <div class="container">
             <ul>
                 <li>Profesor Fabrizio Carlassara</li>
                 <li>
@@ -43,7 +77,9 @@
                     <a href="#">URL del repo de GitHub</a>
                 </li>
             </ul>
-        </footer>
-        
-    </body>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
 </html>
