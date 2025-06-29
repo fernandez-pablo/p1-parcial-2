@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Squid Game",
         "precio": 35.000  ,
-        "imagen": "img/productos/calamar_700.jpg",
+        "imagen": "images/productos/calamar_700.jpg",
         "descripcion": "Guardia Enmascarado Juegos del Calamar es una serie de televisión surcoreana de terror, supervivencia y suspenso creada por Hwang Dong-hyuk para Netflix. Los participantes son obligados a jugar juegos clásicos de la infancia, pero con la amenaza de ser asesinados si pierden o no siguen las reglas ",
         "categoria": "Cine y Series"
         
@@ -12,7 +12,7 @@
         "id": 2,
         "nombre": "Charlie Brown",
         "precio": 42.000,
-        "imagen": "img/productos/CharlieBrown_700.jpg",
+        "imagen": "images/productos/CharlieBrown_700.jpg",
         "descripcion": "Charlie Brown es el personaje principal de la serie de tiras cómicas Peanuts, publicada en numerosos periódicos alrededor del mundo.",
         "categoria": "Cartoons"
     },
@@ -20,7 +20,7 @@
         "id": 3,
         "nombre": "Deathpool",
         "precio": 20.000,
-        "imagen": "img/productos/deathpool_700.jpg",
+        "imagen": "images/productos/deathpool_700.jpg",
         "descripcion": "mercenario, supervillanoy antihéroe, que aparece en los cómics publicados por Marvel Comics. Creado por el artista Rob Liefeld. Deadpool es la historia de Wade Wilson, un ex-operativo de fuerzas especiales convertido en mercenario.",
         "categoria": "Cine y Series"
     },
@@ -28,7 +28,7 @@
         "id": 4,
         "nombre": "Freddy",
         "precio": 50.000,
-        "imagen": "img/productos/freddi_700.jpg",
+        "imagen": "images/productos/freddi_700.jpg",
         "descripcion": "Considerado como uno de los mejores cantantes en la historia del rock, sobresalió por su extravagante personalidad en el escenario y su rango vocal de cuatro octavas. Mercury desafió las convenciones habituales de los líderes rockeros con su estilo teatral, influyendo en la dirección artística de Queen.",
         "categoria": "Artistas"
     },
@@ -36,7 +36,7 @@
         "id": 5,
         "nombre": "Kitty",
         "precio": 15.000,
-        "imagen": "img/productos/kitty_700.jpg",
+        "imagen": "images/productos/kitty_700.jpg",
         "descripcion": "Hello Kitty fue diseñada por Yuko Shimizu, quien creó a esta pequeña gata blanca sin boca, vestida con un lazo rojo en la cabeza. Es un personaje muy feliz que tiene padre, madre y una hermana gemela y fue concebida para convertirse en un gatita muy amigable.",
         "categoria": "Cartoons"
     },
@@ -44,7 +44,7 @@
         "id": 6,
         "nombre": "Kuromi",
         "precio": 10.000,
-        "imagen": "img/productos/kuromi_700.jpg",
+        "imagen": "images/productos/kuromi_700.jpg",
         "descripcion": " a menudo confundida con una mascota de Hello Kitty, es en realidad un personaje único en el universo de Sanrio. Aunque no es una gatita ni está directamente relacionada con Hello Kitty, Kuromi ha ganado popularidad por derecho propio.",
         "categoria": "Cartoons"
     },
@@ -52,7 +52,7 @@
         "id": 7,
         "nombre": "Vinnnie",
         "precio": 30.000,
-        "imagen": "img/productos/motoraton_700.jpg",
+        "imagen": "images/productos/motoraton_700.jpg",
         "descripcion": " En el planeta Marte, existía una raza de ratones antropomórficos que disfrutaban de las carreras de motos y tenían una cultura y sociedad muy similares a las de los seres humanos.",
         "categoria": "Cartoons"
     },
@@ -60,7 +60,7 @@
         "id": 8,
         "nombre": "Munra",
         "precio": 50.000,
-        "imagen": "img/productos/mummra_700.jpg",
+        "imagen": "images/productos/mummra_700.jpg",
         "descripcion": "Munra es el antagonista principal de la serie original, ThunderCats . En la serie original, demostró un dominio absoluto de la magia. A menudo usa a los Mutantes de Plun-Darr como peones en sus planes para derrotar a los ThunderCats. Su intención original era robar y utilizar el poder del Ojo de Thundera.",
         "categoria": "Cartoons"
     },
@@ -68,7 +68,7 @@
         "id": 9,
         "nombre": "Michel Jackson",
         "precio": 30.000,
-        "imagen": "img/productos/michael.png",
+        "imagen": "images/productos/michael.png",
         "descripcion": "Michael Joseph Jackson fue un cantante, compositor, productor y bailarín estadounidense.Apodado como el Rey del Pop por sus contribuciones y reconocimiento en la historia de la música y el baile durante más de cuatro décadas.",
         "categoria": "Artistas"
     },
@@ -76,7 +76,7 @@
         "id": 10,
         "nombre": "Angus",
         "precio": 20.000,
-        "imagen": "img/productos/angus.png",
+        "imagen": "images/productos/angus.png",
         "descripcion": "Angus McKinnon Young (Glasgow, Escocia, Reino Unido, 31 de marzo de 1955) es un músico escocés de nacionalidad australiana, conocido por ser uno de los miembros fundadores y el principal guitarrista del grupo AC/DC, aparte de ser el único miembro que ha permanecido en la banda desde su inicio.",
         "categoria": "Artistas"
     },
@@ -84,7 +84,7 @@
         "id": 11,
         "nombre": "Will",
         "precio": 30.000,
-        "imagen": "img/productos/will.png",
+        "imagen": "images/productos/will.png",
         "descripcion": "William «Will» Byers es un personaje ficticio de la serie de televisión estadounidense de ciencia ficción y terror de Netflix Stranger Things. Creado por los Hermanos Duffer e interpretado por Noah Schnapp.",
         "categoria": "Cine y Series"
     },
@@ -92,7 +92,7 @@
         "id": 12,
         "nombre": "Meliodas",
         "precio": 30.000,
-        "imagen": "img/productos/meliodas_700.jpg",
+        "imagen": "images/productos/meliodas_700.jpg",
         "descripcion": "Meliodases el principal protagonista del manga y anime Nanatsu no Taizai creado por Nakaba Suzuki. Es el líder de los Siete Pecados Capitales, representado por el pecado de la Ira, y su símbolo es el Dragón.",
         "categoria": "Cartoons"
     }
