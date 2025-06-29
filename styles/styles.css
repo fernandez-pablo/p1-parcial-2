@@ -160,12 +160,19 @@ h3 {
     margin-top: 20px;
 }
 
-#lista-carrito li {
+#lista-carrito li, .filtros-ordenamiento {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 10px 0;
+}
+
+
+.filtros-ordenamiento {
+    padding: 0 0 10px 0;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 
