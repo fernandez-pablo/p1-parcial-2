@@ -1,402 +1,276 @@
-/**
- *	Versión 1.0.0
- */
-@charset "utf-8";
 
-/**
- *	Fonts
- */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-
-/**
- *	Mobile
- */
-
-/**	General */
-html {
+*{
     box-sizing: border-box;
 }
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    line-height: 1;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-}
-
-/**	Body */
 body {
-    background-color: #134f5c;
-    color: #d0e0e3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/**	Header */
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.bg-color {
+    background-color: #333 ;
+}
+
+
+.btn-pipo{
+    background: rgb(185, 68, 68);
+    color: whitesmoke;
+    border-color: rgb(212, 70, 93);
+
+    &:hover{
+        background-color: rgb(68, 192, 144);
+        color: black;
+    }
+}
+
+
+.btn-ver-mas {
+    width: 50%;
+    margin: auto;
+    margin-top: 2px;
+    background: rgb(96, 184, 88);
+    color: whitesmoke;
+    border-color: rgb(90, 185, 52);
+
+    &:hover{
+        background-color: rgb(68, 192, 144);
+        color: black;
+    }
+}
+
+
+#productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
     flex-direction: column;
+}
+
+.img-chiquita img {
+    max-width: 7rem;
+    max-height: 7rem;
+    display: block;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+
+/* --- Estilos para la Modal --- */
+.modal {
+    /*display: none;*/ 
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente oscuro */
     justify-content: center;
     align-items: center;
-    padding: 2em;
 }
 
-/**	Encabezados */
-h1,
-h2,
-h3 {
-    font-family: 'Montserrat';
-    font-size: 3.6em;
-    line-height: 1.5;
-    font-weight: 700;
+
+.modal.visible {
+    display: flex; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px; 
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative; /* Para posicionar el botón de cerrar */
+}
+
+.detalle-producto-contenido {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+
 }
 
-h2,
+.detalle-producto-contenido img {
+    max-width: 80%;
+    margin: auto;
+}
+
 h3 {
-    margin: 1em 0;
-    font-size: 3em;
-    color: #134f5c;
+    font-weight: bold;
 }
 
-/**	Main */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 4em 2em;
-    background-color: #fff;
+.producto p :last-of-type {
+    font-size: 1.5rem;
+
+
 }
 
-ul,
-ol {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-items: flex-start;
-    width: 100%;
-}
-
-p,
-ul li,
-ol li {
-    font-size: 2.4em;
-    line-height: 1.5;
-    text-align: left;
-    color: #134f5c;
-}
-
-ul li,
-ol li {
-    margin-left: 2em;
-}
-
-p strong,
-p em,
-p span,
-p a,
-ul li strong,
-ul li em,
-ul li a,
-ol li strong,
-ol li em,
-ol li a {
-    font-size: 1em;
-}
-
-p a,
-ul li a,
-ol li a {
-    color: #134f5c;
-}
-
-p strong,
-ul li strong,
-ol li strong {
-    font-weight: 700;
-}
-
-p em,
-ul li em,
-ol li em {
-    font-style: italic;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-label {
-    font-size: 2.4em;
-    line-height: 1.5;
-    text-align: left;
-    color: #134f5c;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0.5em 0;
-    padding: 1em 2em;
-}
-
-legend {
-    padding: 0 0.5em;
-    font-size: 1.6em;
-    line-height: 1.5;
-    font-weight: 400;
-    text-align: left;
-    color: #134f5c;
-}
-
-input {
-    margin: 0.5em 0;
-    border: 1px solid #134f5c;
-    border-radius: 0.5em;
-    padding: 0 1em;
-    font-size: 2.4em;
-    line-height: 1.5;
-    text-align: left;
-    color: #134f5c;
-}
-
-button,
-input[type='button'],
-input[type='submit'] {
-    margin: 0.5em 0;
-    border: none;
-    border-radius: 0.5em;
-    padding: 0.25em 0.5em;
-    background: #134f5c;
+.close-button {
+    color: #aaa;
+    float: right; 
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 2.4em;
-    line-height: 1.5;
-    text-align: center;
-    color: #d0e0e3;
+    position: absolute; 
+    top: 10px;
+    right: 20px;
 }
 
-input[type='button']:disabled,
-input[type='submit']:disabled {
-    opacity: 0.8;
-    cursor: not-allowed;
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-form textarea {
-    margin: 0.5em 0;
-    border-radius: 0.5em;
-    border: 1px solid #134f5c;
-    padding: 0 0.5em;
-    background: #d0e0e3;
-    font-size: 1.6em;
-    line-height: 1.5;
-    font-weight: 400;
-    text-align: left;
-    color: #134f5c;
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-form select {
-    margin: 0.5em 0;
-    border-radius: 0.5em;
-    border: 1px solid #134f5c;
-    padding: 0 0.5em;
-    background: #d0e0e3;
-    font-size: 1.6em;
-    line-height: 1.5;
-    font-weight: 400;
-    text-align: left;
-    color: #134f5c;
-}
-
-hr {
-    margin: 1em 0%;
-    width: 100%;
-    height: 0.1em;
-}
-
-/**	Footer */
-footer {
+#lista-carrito li {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 2em;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
+
+
+
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+.cantidad-controles {
+    padding-left: 5px;
+}
+
+.cantidad-controles button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin: 0 5px;
+    
+}
+
+.cantidad-controles button.eliminar {
+    background-color: #dc3545;
+}
+
+.cantidad-controles button:hover {
+    opacity: 0.8;
+}
+
+#total-carrito {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#item-count {
+    padding: 5px 10px;
+    background-color: rgb(234, 125, 29);
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ocupa todo el ancho */
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/* Responsiv para la modal */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; 
+        margin: 20px auto; 
+    }
+
+    
+
+}
+
+
 
 footer ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     list-style: none;
 }
 
-footer ul li {
-    font-family: 'Montserrat';
-    font-size: 1.4em;
-    line-height: 1.5;
-    text-align: center;
-    color: #d0e0e3;
-}
 
-footer ul li a {
-    font-family: 'Montserrat';
-    font-size: 1em;
-    text-decoration: none;
-    color: #d0e0e3;
-}
 
-/**	Overs */
-p a:hover,
-li a:hover,
-button:hover,
-input[type='button']:hover,
-input[type='submit']:hover {
-    opacity: 0.8;
-}
+@media screen and (max-width: 860px) {
+    
 
-/**	Carrito */
-#minicarrito {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5em 1em;
-    width: 100%;
-    background: rgba(19, 79, 92, 0.25);
-}
-
-#productos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1em 0;
-    width: 100%;
-    padding: 1em;
-    background: rgba(19, 79, 92, 0.25);
-}
-
-#productos div {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 90%;
-    padding: 1em;
-}
-
-#productos img {
-    width: 90%;
-    margin: 1em 5%;
-}
-
-#productos div div {
-    padding: 0;
-}
-
-#productos h3,
-#productos p {
-    margin: 0;
-    text-align: center;
-}
-
-.modal {
-    position: fixed;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: auto;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal a {
-    text-decoration: none;
-    color: #d0e0e3;
-}
-
-.modal a.cerrar {
-    position: fixed;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 1em;
-    right: 1em;
-    border-radius: 2.5em;
-    width: 5em;
-    height: 5em;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-size: 1em;
-    font-weight: 400;
-    text-align: center;
-    color: #1a4a5e;
-    text-decoration: none;
-}
-
-.modal a.cerrar:hover {
-    background-color: #1a4a5e;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.modal img {
-    height: 30%;
-}
-
-.modal h3,
-.modal p,
-.modal li {
-    margin: 0;
-    text-align: center;
-    color: #d0e0e3;
-}
-
-.modal li {
-    display: flex;
-    justify-content: space-around;
-    margin: 0.25em 0;
-    width: 90%;
-}
-
-.modal li span {
-    font-size: 1em;
-}
-
-/**
- *	Web
- */
-@media screen and (min-width: 960px) {
-    #productos {
-        flex-direction: row;
-    }
-
-    #productos div {
-        width: 30%;
-    }
-
-    /**	Footer */
+    
     footer ul {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
+
+
+
+
+
+footer {
+    padding: 2rem;
+    background-color: #333;
+    color: aliceblue;
+}
+
